@@ -29,4 +29,4 @@ A task management web application that allows users to create, delete, and track
 1. Clone or download the project files.
 2. Ensure you have the required assets (icons and images) in an "assets" folder as referenced in the CSS.
 3. Open the manipulacion_dom.html file in any modern web browser.
-4. Note: Since the project uses ES6 Modules, you should serve the files using a local server (like Live Server in WebStorm) to avoid CORS issues.
+4. Note: Since the project uses ES6 Modules, you should serve the files using a local server.
