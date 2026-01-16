@@ -1,0 +1,124 @@
+/* Reset Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Thin", sans-serif;
+}
+
+p{
+    font-size: 18px;
+}
+
+/* Container Styles*/
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: aliceblue;
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+/* Tasks styles */
+
+.notes-list, .note, .icons{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    width: 500px;
+
+}
+
+.notes-list{
+    flex-direction: column;
+}
+
+.icons{
+    flex-direction: row;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.uncompleted-icon{
+    background-image: url("assets/time.ico");
+    transition: scale 1s;
+
+}
+
+.completed-icon{
+    background-image: url("assets/checked.ico");
+    transition: scale 1s;
+
+}
+
+.delete-icon{
+    background-image: url("assets/delete-note.png");
+    transition: scale 1s;
+}
+
+.icons:hover{
+    scale: 1.2;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.task-form{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.task-label{
+    font-size: 18px;
+}
+
+.task-input{
+    height: 35px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.task-input:focus{
+    background-color: #fffbe0;
+    border: 3px solid #000000;
+}
+
+.task-btn{
+    background-color: #fff7ac;
+    font-size: 18px;
+
+    font-weight: bold;
+    width: 130px;
+    height: 35px;
+    border-radius: 7px;
+    border: 1px solid black;
+    transition: scale 0.5s;
+
+}
+
+.task-btn:hover{
+    cursor: pointer;
+    scale: 1.1;
+    background-color: darkgray;
+    color: white;
+}
+
+/* Error Message style */
+.error{
+    color: #ff4b4b;
+}

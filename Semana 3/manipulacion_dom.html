@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista tareas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Container -->
+    <div class="container">
+
+        <h1>Lista de tareas</h1>
+
+        <p>Ingresa la tareas que desees crear en el cuadro de texto y das clic en el botón agregar</p>
+
+        <!-- Tasks Form -->
+        <form class="task-form" id="task-form">
+
+            <label for="task-input" class="task-label">Tarea</label>
+            <input type="text" id="task-input" class="task-input" placeholder="   Ingrese una tarea">
+            <button type="submit" id="task-btn" class="task-btn">Agregar</button>
+        </form>
+
+        <!-- Tasks List Created -->
+        <ul id="notes-list" class="notes-list">
+        </ul>
+
+    </div>
+
+    <!-- JavaScript File -->
+    <script type="module" src="src/script.js"></script>
+
+</body>
+
+</html>
