@@ -1,0 +1,60 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "producto": "Laptop Pro 15",
+      "cantidad": "16",
+      "precio": "1010.54",
+      "descripcion": "Computadora portátil de alto rendimiento con 16GB RAM y 512GB SSD."
+    },
+    {
+      "id": "2",
+      "producto": "Monitor UltraWide 35",
+      "cantidad": "28",
+      "precio": "450",
+      "descripcion": "Monitor curvo para productividad y gaming con resolución QHD."
+    },
+    {
+      "id": "3",
+      "producto": "Teclado Mecánico RGB",
+      "cantidad": 25,
+      "precio": 85.99,
+      "descripcion": "Teclado con switches red y retroiluminación personalizada."
+    },
+    {
+      "id": "4",
+      "producto": "Mouse Ergonómico Inalámbrico",
+      "cantidad": 40,
+      "precio": 45,
+      "descripcion": "Mouse diseñado para reducir la tensión en la muñeca durante largas jornadas."
+    },
+    {
+      "id": "5",
+      "producto": "Auriculares Sony",
+      "cantidad": "11",
+      "precio": "250.45",
+      "descripcion": "Auriculares Bluetooth con tecnología activa de cancelación de ruido."
+    },
+    {
+      "id": "131",
+      "producto": "Auriculares Gamer",
+      "cantidad": "5",
+      "precio": "20.12",
+      "descripcion": "Sonido envolvente 7.1 con micrófono integrado"
+    },
+    {
+      "id": "423",
+      "producto": "Memoria RAM",
+      "cantidad": "30",
+      "precio": "70",
+      "descripcion": "Memoria RAM 16gb DDR5 laptop"
+    },
+    {
+      "id": "128",
+      "producto": "Disco duro 1tb",
+      "cantidad": "20",
+      "precio": "45",
+      "descripcion": "Disco duro 1tb SSD"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+
+Objetivo de la Historia de usuario
+Diseñar e implementar una aplicación web completa que integre los conceptos fundamentales de JavaScript vistos durante el Módulo 3, incluyendo interacción con el usuario, manipulación dinámica del DOM, persistencia de datos en el navegador y comunicación con servidores mediante Fetch API. Con esta historia, cada coder podrá reforzar:
+
+    Declaración y manipulación de variables (let, const) y estructuras de datos (objetos, arrays, sets, maps).
+    Interacción con el usuario mediante entrada de datos y mensajes dinámicos.
+    Manipulación avanzada del DOM (crear, modificar y eliminar elementos).
+    Uso de Local Storage para persistir información.
+    Comunicación con un servidor simulado o real mediante Fetch API y operaciones CRUD (GET, POST, PUT, DELETE).
+    Manejo de errores y validación de datos.
+    Buenas prácticas de código, comentarios descriptivos y nomenclatura camelCase.
+
+
+Descripción de las tareas
+TASK 1
+1. Crea los siguientes archivos iniciales:
+
+    index.html: contendrá la estructura del proyecto con un formulario para agregar datos (por ejemplo, productos o tareas), una lista (<ul>) donde se renderizarán los elementos, y un botón para sincronizar con la API.
+    app.js: contendrá toda la lógica de interacción, persistencia y comunicación con el servidor.
+    Requisitos:
+        Comentar claramente cada sección.
+        Verificar que los archivos estén correctamente enlazados.
+
+TASK 2
+2. Captura e interacción con el usuario:
+
+    Solicita al usuario información desde el DOM o mediante prompt() (nombre del producto, precio, o descripción).
+    Valida los campos para evitar datos vacíos o inválidos.
+    Muestra mensajes dinámicos de éxito o error en consola o en el DOM.
+
+TASK 3
+3. Manipulación dinámica del DOM:
+
+    Permite agregar elementos a una lista del DOM representando los datos capturados.
+    Crea elementos <li> dinámicamente y agrégales un botón “Eliminar”.
+    Implementa la función para borrar un elemento al hacer clic.
+    Usa appendChild() y removeChild() para modificar el DOM.
+
+TASK 4
+4. Persistencia en Local Storage:
+
+    Guarda los datos agregados en el navegador para mantenerlos entre sesiones.
+    Implementa un arreglo global para almacenar los datos.
+    Usa localStorage.setItem() y localStorage.getItem() para guardar y recuperar información.
+    Al recargar la página, renderiza los datos almacenados automáticamente.
+
+TASK 5
+5. Integración con Fetch API (Consumo de API):
+
+    Conecta la aplicación con un servidor local (JSON Server) o una API pública.
+    Implementa las operaciones básicas:
+        GET: obtener la lista de elementos.
+        POST: agregar nuevos elementos.
+        PUT: actualizar un elemento existente.
+        DELETE: eliminar un elemento.
+    Usa async/await y try...catch para manejar las respuestas y errores.
+    Muestra en consola o DOM los resultados de cada solicitud.
+
+TASK 6
+6. Validaciones y pruebas finales:
+
+    Asegura que todas las funcionalidades trabajen en conjunto:
+        Los datos se agregan al DOM.
+        Los cambios se reflejan en el Local Storage.
+        Las operaciones se sincronizan correctamente con la API.
+    Incluye capturas de:
+        El DOM antes y después de una operación.
+        La consola mostrando las respuestas del servidor.
+        El contenido del Local Storage.
+
+
+Criterios de aceptación
+
+    Se utiliza JavaScript moderno (ES6+) con let y const.
+    Se integran correctamente los conceptos de DOM, Local Storage, y Fetch API.
+    Se aplican validaciones de entrada y manejo de errores.
+    Las operaciones CRUD funcionan correctamente con la API.
+    El código está comentado y organizado.
+    Se evidencian resultados mediante capturas o registros en consola.
+

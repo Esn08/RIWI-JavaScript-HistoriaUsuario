@@ -53,19 +53,19 @@ p{
 }
 
 .uncompleted-icon{
-    background-image: url("assets/time.ico");
+    background-image: url("../assets/time.ico");
     transition: scale 1s;
 
 }
 
 .completed-icon{
-    background-image: url("assets/checked.ico");
+    background-image: url("../assets/checked.ico");
     transition: scale 1s;
 
 }
 
 .delete-icon{
-    background-image: url("assets/delete-note.png");
+    background-image: url("../assets/delete-note.png");
     transition: scale 1s;
 }
 
