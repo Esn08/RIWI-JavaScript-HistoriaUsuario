@@ -1,4 +1,4 @@
-# Interactive System Project
+# User Story 1 (Interactive System Project)
 
 This project is a functional JavaScript implementation designed to interact with users through the browser. It requests personal information, validates the input data, and provides dynamic feedback based on the user's age.
 
