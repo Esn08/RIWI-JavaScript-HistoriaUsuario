@@ -1,4 +1,4 @@
-# User Story 3 (Data Management with Advanced JavaScript Structures)
+# User Story 2 (Data Management with Advanced JavaScript Structures)
 
 This project focuses on the implementation and manipulation of advanced data structures in JavaScript, specifically Objects, Sets, and Maps. It demonstrates how to organize, store, and validate information efficiently through a practical exercise of product management.
 

@@ -143,3 +143,8 @@ input:focus{
     font-size: clamp(6px, 1.1vw, 18px);
     font-weight: bold;
 }
+
+.textarea{
+    width: 90%;
+    height: 60px;
+}

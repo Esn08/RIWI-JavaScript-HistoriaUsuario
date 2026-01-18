@@ -50,11 +50,11 @@
       "descripcion": "Memoria RAM 16gb DDR5 laptop"
     },
     {
-      "id": "128",
+      "id": "25",
       "producto": "Disco duro 1tb",
-      "cantidad": "20",
-      "precio": "45",
-      "descripcion": "Disco duro 1tb SSD"
+      "cantidad": "30",
+      "precio": "105.45",
+      "descripcion": "Disco duro SSD 1tb"
     }
   ]
 }
