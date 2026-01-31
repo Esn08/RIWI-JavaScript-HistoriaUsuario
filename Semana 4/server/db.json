@@ -34,6 +34,13 @@
       "cantidad": "11",
       "precio": "250.45",
       "descripcion": "Auriculares Bluetooth con tecnología activa de cancelación de ruido."
+    },
+    {
+      "id": "973",
+      "producto": "Disco duro 1tb",
+      "cantidad": "20",
+      "precio": "110",
+      "descripcion": "Disco duro SSD 1tb"
     }
   ]
 }
