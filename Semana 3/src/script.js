@@ -73,7 +73,8 @@ taskForm.addEventListener("submit", function (event) {
 let CreateTask = function (obj) {
 
     let note = document.createElement("li")
-    note.className = "note"
+
+    note.classList.add("note", (obj.status === "Pendiente") ? "note-uncompleted" : "note-completed" )
     let textTask = document.createElement("p")
     textTask.textContent = obj.task
 
@@ -81,6 +82,7 @@ let CreateTask = function (obj) {
     let statusTask = document.createElement("div")
     let statusTaskImg = document.createElement("img")
     let statusTaskText = document.createElement("i")
+
 
     statusTask.classList.add("icons", (obj.status === "Pendiente") ? "uncompleted-icon" : "completed-icon" )
     statusTaskText.textContent = obj.status
@@ -135,6 +137,7 @@ let changeStatusTask = function (event) {
 
         if (statusTask.classList.contains("uncompleted-icon")) {
             // Change to Completed
+            taskText.classList.replace("note-uncompleted", "note-completed")
             statusTask.classList.replace("uncompleted-icon", "completed-icon")
             statusTask.children[1].textContent = "Completada"
             changeStatusLocalStorage(taskText.firstElementChild.textContent,  statusTask.children[1].textContent)
@@ -142,6 +145,7 @@ let changeStatusTask = function (event) {
 
         } else {
             // Change back to Pending
+            taskText.classList.replace("note-completed", "note-uncompleted")
             statusTask.classList.replace("completed-icon", "uncompleted-icon")
             statusTask.children[1].textContent = "Pendiente"
             changeStatusLocalStorage( taskText.firstElementChild.textContent,  statusTask.children[1].textContent)

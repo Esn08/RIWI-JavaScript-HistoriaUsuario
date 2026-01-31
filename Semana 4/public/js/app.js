@@ -9,8 +9,6 @@ const table= document.querySelector(".tbody-data")
 const btnUpdate = document.getElementById("btn-update")
 const btnSubmit = document.getElementById("btn-submit")
 const btnAPI= document.getElementById("btn-api")
-const btnReset = document.getElementById("btn-reset")
-
 
 // Handle new product creation via form submission
 form.addEventListener("submit", async (e) => {
@@ -18,9 +16,11 @@ form.addEventListener("submit", async (e) => {
 
     let formData = new FormData(form)
     let data = Object.fromEntries(formData)
+    
+    let confirmed = confirm("¿Desea crear el producto?")
 
     // Basic validation to ensure required fields are not empty
-    if (!(data.producto === "") && !(data.cantidad === "") && !(data.precio === "") && !(data.descripcion === "")) {
+    if (!(data.producto === "") && !(data.cantidad === "") && !(data.precio === "") && !(data.descripcion === "") && confirmed) {
 
         // Generate a random ID and persist the new product to API and Local Storage
         let id = Math.floor(Math.random() * 1000);
@@ -28,16 +28,18 @@ form.addEventListener("submit", async (e) => {
         saveStorage({id, ...data})
 
         // Refresh UI table
-        table.innerHTML = ""
-        await createElement()
-
         form.reset()
+        
+        alert("¡Se ha creado con éxito el producto!")
 
     }
 
     else {
         alert("Ningún campo puede estar vacio")
     }
+
+    table.innerHTML = ""
+    await createElement()
 
 })
 
@@ -47,9 +49,10 @@ window.addEventListener("load", () => {
     loadStorage()
 })
 
-// Force application reload on reset click
-btnReset.addEventListener("click", () => {
-    location.reload()
+// Sync UI with API data by reloading
+btnAPI.addEventListener("click", () => {
+    createElement()
+    loadStorage()
 })
 
 // Delegation for Edit and Delete actions within the products table
@@ -84,10 +87,18 @@ table.addEventListener("click", async (e) => {
 
         // Delete the product
         let response= await deleteProduct(idToDelete.textContent)
-        if (response) {
+        
+        let confirmed = confirm("¿Desea eliminar el producto?")
+        
+        if (response && confirmed) {
 
             deleteStorage(idToDelete.textContent)
-            tableRow.remove()
+
+            table.innerHTML = ""
+            await createElement()
+            
+            alert("¡Se ha eliminado con éxito el producto!")
+
         }
 
     }
@@ -105,30 +116,33 @@ btnUpdate.addEventListener("click", async () => {
 
         objectToUpdate[input] = dataToUpdate[input].value
     }
-
+    
     // Sync updates with external API and storage
-    await updateProduct(objectToUpdate["id"], objectToUpdate["producto"], objectToUpdate["cantidad"], objectToUpdate["precio"], objectToUpdate["descripcion"])
-    updateStorage(objectToUpdate["id"], objectToUpdate)
+    if (confirm(`¿Desea actualizar el producto?`)) {
+        
+        await updateProduct(objectToUpdate["id"], objectToUpdate["producto"], objectToUpdate["cantidad"], objectToUpdate["precio"], objectToUpdate["descripcion"])
+        updateStorage(objectToUpdate["id"], objectToUpdate)
 
-    // Refresh table and reset form state
-    table.innerHTML = ""
-    await createElement()
+        // Refresh table and reset form state
+        table.innerHTML = ""
+        await createElement()
 
-    form.reset()
 
-    // Restore buttons to a default 'Save' state
-    btnUpdate.disabled = true;
-    btnUpdate.classList.replace("btn", "btn-disable")
+        alert("¡Se ha actualizado con éxito el producto!")
 
-    btnSubmit.disabled = false;
-    btnSubmit.classList.replace("btn-disable", "btn")
+        form.reset()
 
+        // Restore buttons to a default 'Save' state
+        btnUpdate.disabled = true;
+        btnUpdate.classList.replace("btn", "btn-disable")
+
+        btnSubmit.disabled = false;
+        btnSubmit.classList.replace("btn-disable", "btn")
+        
+    }
+    
 })
 
-// Sync UI with API data by reloading
-btnAPI.addEventListener("click", () => {
-    location.reload()
-})
 
 
 

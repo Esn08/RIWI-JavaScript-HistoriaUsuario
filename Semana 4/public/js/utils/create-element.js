@@ -52,7 +52,6 @@ export async function createElement() {
                 fragmentTableRow.append(td)
             }
 
-
             row.append(fragmentTableRow)
             fragmentTableBody.append(row)
 

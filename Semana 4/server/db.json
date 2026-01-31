@@ -34,27 +34,6 @@
       "cantidad": "11",
       "precio": "250.45",
       "descripcion": "Auriculares Bluetooth con tecnología activa de cancelación de ruido."
-    },
-    {
-      "id": "131",
-      "producto": "Auriculares Gamer",
-      "cantidad": "5",
-      "precio": "20.12",
-      "descripcion": "Sonido envolvente 7.1 con micrófono integrado"
-    },
-    {
-      "id": "423",
-      "producto": "Memoria RAM",
-      "cantidad": "30",
-      "precio": "70",
-      "descripcion": "Memoria RAM 16gb DDR5 laptop"
-    },
-    {
-      "id": "25",
-      "producto": "Disco duro 1tb",
-      "cantidad": "30",
-      "precio": "105.45",
-      "descripcion": "Disco duro SSD 1tb"
     }
   ]
 }
